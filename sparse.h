@@ -61,6 +61,8 @@ public:
    * @brief Convert COO to CSR.
    *
    * Builds CSR arrays from COO input. Duplicates are kept.
+   *
+   * @ref Timony A. Davis, Direct Methods for Sparse Linear Systems, SIAM.
    */
   void compress(const std::vector<int>&    r,
                 const std::vector<int>&    c,
@@ -100,6 +102,9 @@ public:
    * @brief Remove duplicate entries.
    *
    * Combines duplicate entries by summing values.
+   *
+   * @ref Timony A. Davis, Direct Methods for Sparse Linear Systems, SIAM.
+   *
    */
   void deduplicate()
   {
@@ -148,6 +153,9 @@ public:
    * @brief Sort column indices within each row.
    *
    * Uses double transpose algorithm. O(m + n + nnz) complexity.
+   *
+   * @ref Timony A. Davis, Direct Methods for Sparse Linear Systems, SIAM.
+   *
    */
   void sort()
   {
