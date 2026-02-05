@@ -1,6 +1,6 @@
 /**
- * @brief Demonstrates COO assembly from multiple components
- *        and convert to CSR format with deduplication and sort.
+ * @brief Demonstrates COO assembly from multiple components and convert to CSR format.
+ * 
  */
 
 #include "sparse.h"
