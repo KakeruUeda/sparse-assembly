@@ -29,10 +29,10 @@ public:
     nnzdup_ = nnz;
     nnz_    = nnz;
 
-    rind_ = new int[nnzdup_]{};
-    cind_ = new int[nnzdup_]{};
-    vals_ = new double[nnzdup_]{};
-    ms_   = new int[nnzdup_]{};
+    rind_ = new int[nnzdup_];
+    cind_ = new int[nnzdup_];
+    vals_ = new double[nnzdup_];
+    ms_   = new int[nnzdup_];
   }
 
   ~CooMatrix()
@@ -40,6 +40,7 @@ public:
     delete[] rind_;
     delete[] cind_;
     delete[] vals_;
+    delete[] rptr_;
     delete[] ms_;
     delete[] msnd_;
   }
